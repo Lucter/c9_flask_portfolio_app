@@ -43,20 +43,8 @@ def shopping_list_post():
     if request.method == 'GET':
       return render_template('shopping_list.html')
     elif request.method == 'POST':
-	def word_frequency(request.form['text'].split()):
-  	final_frequency={}
-  
-  		for word in sentence.split():
-    
-    			if word not in final_frequency:
-      				final_frequency[word]=1
-    			else:
-     			 final_frequency[word]+=1
-  
- 		return final_frequency
-
-	print (word_frequency(sentence))
-                   
+	print request.form['text'].split()
+                 
           shop_list = []
           try:
             for item in request.form['text'].split():
